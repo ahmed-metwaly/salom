@@ -1,0 +1,1 @@
+[04-Jun-2018 12:03:35 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/mdevws4it/public_html/hogozati/app/Bank.php on line 7

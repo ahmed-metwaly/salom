@@ -1,0 +1,773 @@
+/*-*--------------------------
+------ [ My Framwork ] -------
+-------------------------*--*/
+body {
+    font-family: 'Cairo';
+    overflow: hidden
+}
+
+h1,h2,h4 { font-family: 'El Messiri' }
+
+h2 { margin-bottom: -10px }
+
+.font-48 {
+    font-size: 48px !important;
+    font-family: 'El Messiri';
+}
+
+.font-24 { font-size: 24px !important }
+
+.font-18 { font-size: 18px !important }
+
+.font-14 { font-size: 14px !important }
+
+.line-2 { line-height: 2 }
+
+/*-----------------
+	Main Colors
+-----------------*/
+/*Text Color*/
+.color-c5,
+.color-c5:hover { color: #c5a46d }
+
+.color-af,
+.color-af:hover { color: #af4c4c }
+
+.color-11 { color: #11c247 }
+
+.color-e0 { color: #e0c328 }
+
+.color-ae { color: #ae8b51 }
+
+.color-777 { color: #777 }
+
+.checked { color: #e0c328 }
+
+/* Background Color */
+.bg-e2 { background-color: #e2d1b6 }
+
+.bg-1c { background-color: #1c1c1c }
+
+.bg-0a { background-color: #0a0d11 }
+
+.bg-f6 { background-color: #f6f6f8 }
+
+.bg-c5 { background-color: #c5a46d !important }
+
+.bg-1d { background-color: #1d9a04 !important }
+
+.bg-777 { background-color: #777 !important }
+
+/* Background Social Media */
+.bg-facebook { background-color: #3a589b }
+
+.bg-twitter { background-color: #1fabed }
+
+.bg-google { background-color: #d35a3a }
+
+.bg-yahoo { background-color: #6001d2 }
+
+.bg-hotmail { background-color: #0078d7 }
+
+/*-------------
+	Hovers
+-------------*/
+/* Btn Hover */
+.btn-hover,
+.btn-hover2 { border: 2px solid transparent !important; }
+
+.btn-hover:hover {
+    border: 2px solid #c5a46d !important;
+    background: transparent !important;
+    color: #c5a46d !important;
+    font-weight: bold
+}
+
+.btn-hover2:hover { background: #c5a46d; }
+
+/* Text Hover */
+.text-hover:hover { color: #c5a46d !important; }
+
+/* Border Hover */
+.border-hover { border-bottom: 1px solid transparent ; }
+.border-hover:hover { border-bottom: 1px solid #777 ; }
+
+/* Social Hover */
+.social li a:hover{ color: #ae8b51 !important;}
+
+/* Transition */
+.trans,
+.btn-hover,
+.btn-hover2,
+.text-hover,
+.border-hover,
+.services .serv-card .serv-img,
+input {
+    -webkit-transition: all .7s ease-in-out !important;
+    -moz-transition: all .7s ease-in-out !important;
+    -o-transition: all .7s ease-in-out !important;
+    transition: all .7s ease-in-out !important;
+}
+/*-----------
+	Reset
+-----------*/
+a { text-decoration: none !important }
+
+:focus,
+input {
+    -webkit-box-shadow: 0 0 0 0px rgba(2, 117, 216, 0.25) !important;
+    box-shadow: 0 0 0 0px rgba(2, 117, 216, 0.25) !important;
+    outline: none !important;
+    border: none;
+}
+
+select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+/*-------------
+	Others
+-------------*/
+/* Overlay */
+.overlay {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* Header For Other Pages */
+.page-head {
+    background: url(../img/head-center.png) center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    height: 200px;
+}
+
+/* Hide Placeholder */
+:focus::-moz-placeholder { opacity: 0 }
+
+:focus:-ms-input-placeholder { opacity: 0 }
+
+:focus::-webkit-input-placeholder { opacity: 0 }
+
+/*-*---------------------
+------ [ Header ] -------
+--------------------*--*/
+
+/*--*-------------
+    Header Top
+-------------*--*/
+
+header .top .dropdown-menu {
+    width: 250px;
+    right: -50px;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px
+}
+/*--*---------------------------
+    Header Bottom [ Navbar ]
+---------------------------*--*/
+
+header .bottom .navbar .navbar-nav li { border: 1px solid #1c1c1c !important; }
+
+header .bottom .navbar .navbar-nav li:hover,
+header .bottom .navbar .navbar-nav .active,
+.border,
+.search .select2.select2-container .select2-selection { border: 1px solid #c5a46d !important }
+
+/*-*---------------------
+------ [ Slider ] -------
+--------------------*--*/
+
+main .slider .owl-carousel {
+    height: 500px;
+    overflow: hidden
+}
+
+main .slider .owl-carousel .owl-dots,
+.best .card .card-hr {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    z-index: 15;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+main .slider .owl-carousel .owl-dots .active{ background-color: #c5a46d; }
+
+main .slider .owl-carousel .owl-dot{
+    width: 20px;
+    height: 20px;
+    background: #786f67;
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+/*-*--------------------------
+------ [ Search Form ] -------
+-------------------------*--*/
+
+.box i {
+    position: absolute;
+    left: 30px;
+    top: 51px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+}
+
+.switch input { display:none }
+
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 8;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #777;
+    -webkit-transition: .4s;
+    transition: .4s;
+    height: 10px;
+    margin-left: 10px;
+}
+
+.toggle:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0px;
+    bottom: -8px;
+    background-color: #c5a46d;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .toggle { background-color: #28a745; }
+
+input:focus + .toggle { box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .toggle:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded Button */
+
+.round { border-radius: 34px; }
+
+.round:before { border-radius: 50%; }
+
+/*-*-----------------------
+------ [ Services ] -------
+----------------------*--*/
+.services .serv-card .serv-text:before,
+.services .serv-card .serv-text2:before{
+    content: "";
+    border: 5px solid #c5a46d;
+    height: 100%;
+    width: 600px;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    z-index: -1
+}
+
+.services .serv-card .serv-text:before {
+    right: 0;
+}
+
+.services .serv-card .serv-text2:before {
+    left: 0;
+}
+
+.services .serv-card .serv-img {
+    transform: scale(.95,.95);
+}
+
+.services .serv-card:hover .serv-img { transform: scale(1,1); }
+
+/*-*---------------------
+------- [ Best ] --------
+--------------------*--*/
+
+.best .card {
+    height: 450px;
+    max-width: 400px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.best .card .card-hr {
+    width: 100px;
+    height: 3px
+}
+
+.best .card .card-hr,
+.best .card .card-block,
+.best .card .card-img-top { transition:all .7s linear; }
+
+.best .card .card-hr {
+    bottom: 446px;
+    z-index: 1
+}
+
+.best .card:hover .card-hr { bottom: 0px; }
+
+.best .card .card-block {
+    bottom: 290px;
+    z-index: 1
+}
+
+.best .card:hover .card-block { bottom: 10px; }
+
+.best .card .card-img-top {
+    top: 160px;
+    z-index: 2;
+    max-width: 400px
+}
+
+.best .card:hover .card-img-top { top: 0px; }
+
+.best .card .card-img-top img {
+    min-height: 290px;
+    max-height: 300px;
+}
+
+/*-*---------------------
+-------- [ Img ] --------
+--------------------*--*/
+.img {
+    height: 400px;
+    background: url(../img/eye-liner.png) center center no-repeat fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+/*-*---------------------
+-------- [ Map ] --------
+--------------------*--*/
+#map { height: 500px }
+/*-*---------------------
+------ [ Footer ] -------
+--------------------*--*/
+.subscribe .sub h1 {
+    margin-top: -20px;
+    height: 120px;
+    line-height: 120px;
+    font-family: 'El Messiri';
+    z-index: 4
+}
+
+.subscribe .sub i {
+    line-height: 120px;
+    color: #9a8157;
+    top: 0px;
+    left: 43%;
+    z-index: 2
+}
+
+.subscribe form input,
+.subscribe form button {
+    height: 56px;
+    line-height: 56px
+}
+
+.border-right { border-right: 1px solid #333 }
+/*-*----------------
+---- Scroll Top ----
+---------------*--*/
+#btn-top {
+    z-index: 9999;
+    position: fixed;
+    right: -35 ;
+    bottom: -35;
+    cursor: pointer
+}
+/*-*-------------
+---- Loading ----
+------------*--*/
+.loading {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    left: 0px;
+    top: 0px;
+    display: flex
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  text-align: center;
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #c5a46d;
+  border-radius: 100%;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+/*-*--------------------------------
+------ [ Page : { Center } ] -------
+-------------------------------*--*/
+.img-center,
+.center #map{ height: 300px !important; }
+
+.img-center {
+    background: url(../img/center.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+/*-*---------------------------------------------
+------ [ Page : { Type Of Membership } ] --------
+--------------------------------------------*--*/
+.type .btn {
+    height: 105px !important;
+    width: 120px !important;
+    border: 5px solid transparent;
+}
+/*-*--------------------------------
+------ [ Page : { Login } ] --------
+-------------------------------*--*/
+.login .form-group input,
+.login .form-group select,
+.select2.select2-container .select2-selection:focus,
+.select2.select2-container .select2-selection:hover { border: 2px solid transparent; }
+
+.login .form-group input:focus,
+.login .form-group input:hover,
+.login .form-group select:focus,
+.login .form-group select:hover,
+.select2.select2-container .select2-selection:focus,
+.select2.select2-container .select2-selection:hover,
+.btn-img:focus,
+.btn-img:hover { border: 2px solid #c5a46d; }
+
+.login .log a {
+    width: 150px !important;
+    height: 70px !important;
+}
+
+.login .custom-file input {
+    outline: none;
+}
+
+.login .border-right-left {
+    border-left: 15px solid #f6f6f8;
+    border-right: 15px solid #f6f6f8;
+}
+    
+/*-*--------------------------------------
+------ [ Page : { Reservation } ] --------
+-------------------------------------*--*/
+.reservation i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.reservation .card {
+    height: 310px;
+    overflow: hidden;
+}
+
+.reservation .card img { height: 100% }
+
+.reservation .card .card-footer .btn-reserv {
+    background-color: #ff002c;
+    width: 150px !important;
+    height: 35px !important;
+}
+.reservation a.active{
+    border: 2px solid #c5a46d !important;
+    background: transparent !important;
+    color: #c5a46d !important;
+    font-weight: bold;
+}
+/*-*----------------------------------
+------ [ Page : { Service } ] --------
+---------------------------------*--*/
+.service svg { margin-bottom: -13px; }
+
+.service .card .fa-ban {
+    top: 10;
+    opacity: .3;
+    font-size: 12em;
+}
+
+.service .card .card-img-top img {
+    max-height: 260px;
+    color: #2fa5d6
+}
+/*-*----------------------------------
+----- [ Page : { Contac Us } ] -------
+---------------------------------*--*/
+.contact .contact-form { margin-right: -16px; }
+
+.contact .input-border,
+textarea{ border: 1px solid #e0e0e0 !important; }
+/*-*-----------
+---- Media ----
+----------*--*/
+/* Media [990px]  */
+@media (max-width: 990px) {
+    /* Slider */
+    main .slider .owl-carousel { height: auto; }
+    
+    /* Best Center */
+    .best .card { height: 350px; }
+
+    .best .card .card-hr { bottom: 346px; }
+
+    .best .card .card-block { bottom: 165px; }
+
+    .best .card:hover .card-block { bottom: -10px; }
+
+    .best .card .card-img-top { top: 180px; }
+
+    .best .card:hover .card-img-top { top: 0px; }
+    
+    /* Reservation Page */
+    .reservation .card,
+    .reservation .card img { height: auto }
+    
+    /* Service Page */
+    .service .card{ max-height: 1000px; }
+    .service .card .card-img-top img { height: auto; max-height: none }
+}
+/* Media [768px]  */
+@media (max-width: 768px) {
+    /* Header [ Top ] */
+    header .top .dropdown-menu { right: 60% !important }
+    
+    /* Slider */
+    main .slider .owl-carousel .owl-dot{
+        width: 15px;
+        height: 15px;
+    }
+    /* Services */
+    .services .serv-card .serv-text:before,
+    .services .serv-card .serv-text2:before {
+        height: 500;
+        width: 100%;
+    }
+    
+    .services .serv-card .serv-text2:before { margin-top: -130px; }
+    
+    /* Best Center */
+    .best .card {
+        height: 450px;
+        max-width: 360
+    }
+
+    .best .card .card-hr {  bottom: 446px; }
+
+    .best .card .card-block { bottom: 300px; }
+
+    .best .card:hover .card-block { bottom: 10px; }
+
+    .best .card .card-img-top { top: 150px; }
+    
+    /* Contact US Page */
+    .contact .contact-form {
+        margin-top: -1px!important;
+        margin-right: 0px!important;
+    }
+    /* Login Page */
+    .login .border-right-left {
+        border: none !important;
+    }
+}
+/* Media [480px]  */
+@media (max-width: 480px) {
+    /* Services */
+    .services .serv-card .serv-text2:before { margin-top: -120px; }
+    
+    /* Best Center */
+    .best .card {
+        height: 420px;
+        max-width: 360
+    }
+
+    .best .card .card-hr { bottom: 416px; }
+
+    .best .card .card-block { bottom: 270px; }
+
+    .best .card:hover .card-block { bottom: 10px; }
+    
+    /* Center Page */
+    .center .font-24 { font-size: 18px !important }
+    /* Orders */
+    .product-disc .font-18 { font-size: 14px !important }
+}
+/* Media [420px]  */
+@media (max-width: 420px) {
+    /* Header [ Top ] */
+    header .top .dropdown-menu { right: 35% !important }
+    /* ٌeservation */
+    .reservation .card .card-footer .btn-reserv {
+        width: 100px !important;
+    }
+}
+/*-*------------
+---- Others ----
+-----------*--*/
+
+.payment a:hover .btn-hover {
+    border: 2px solid #fff !important;
+    background: transparent !important;
+    color: #fff !important;
+    font-weight: bold
+}
+
+a.bg-c5:focus{
+    border: 2px solid #c5a46d !important;
+    background: transparent !important;
+    color: #c5a46d !important;
+    font-weight: bold
+}
+
+/* Btn Price */
+.serv-price {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    -webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    text-align: left;
+    width: 130px
+}
+
+/* Select 2 Box */
+.select2.select2-container { width: 100% !important; }
+
+.select2.select2-container .select2-selection {
+    height: 38px;
+    outline: none;
+    border: none;
+}
+
+.select2.select2-container .select2-selection .select2-selection__rendered { line-height: 32px; }
+
+.select2.select2-container .select2-selection .select2-selection__arrow {
+    height: 32px;
+    width: 33px;
+}
+
+.select2.select2-container .select2-selection--multiple {
+    height: auto;
+    min-height: 34px;
+}
+
+.select2.select2-container .select2-selection--multiple .select2-search--inline .select2-search__field { height: 32px; } 
+
+.select2.select2-container .select2-selection { border-radius: 0px; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b { display:none; }
+
+/* Media Print */
+
+@media print {
+    @page { margin: 0 auto; }
+    .reservation {
+        margin-top: 32px;
+    }
+    .reservation h4 {
+        font-size: 20px;
+    }
+    .reservation .col-print {
+        width: 50%;
+        display: inline-block;
+    }
+    
+    header, footer, .fa.fa-angle-up {
+        display: none;
+    }
+    .color-c5, table thead.text-white {
+        color: #343a40 !important;
+    }
+    
+}
+
+.page-head .overlay .container .row div.d-flex {
+    padding-top: 24px;
+}
+
+.page-head .overlay .container .row div.text-md-left.text-right {
+    display: none;
+}

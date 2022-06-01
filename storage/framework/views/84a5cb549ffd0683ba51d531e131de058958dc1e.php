@@ -1,0 +1,362 @@
+
+
+<?php $__env->startSection('title'); ?>
+    حسابي
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <div class="page-head bg-cover position-relative">
+        <div class="overlay position-absolute py-5">
+            <div class="container">
+                <div class="row py-md-4 py-0">
+                    <div class="col-md-6 col-sm-12 d-flex align-items-center wow slideInRight">
+                        <h2 class="h2 color-c5 font-weight-bold "> حسابي</h2>
+                    </div>
+                    <div class="col-md-6 col-sm-12 mt-0 mt-3 text-md-left text-right wow slideInLeft">
+                        <a class="h4 color-c5 font-weight-bold" href="<?php echo e(route('home')); ?>">الرئيسية / </a>
+                        <span class="h4 color-c5 font-weight-bold"> حسابي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="login">
+        <div class="container">
+            <div class="text-center my-5 wow fadeInDown">
+                <h2 class="color-c5">بياناتي الشخصية</h2>
+                <img class="img-fluid" src="<?php echo e(URL::asset('public/web/img/line.png')); ?>" alt="">
+            </div>
+
+            <?php echo Form::open([ 'url' => route('store-profile'), 'class' => 'row bg-f6 p-5 p-5', 'files' => 'true' ]); ?>
+
+
+            
+                
+            
+            
+                
+                    
+                    
+                
+                
+                    
+                        
+                    
+                
+            
+
+            
+                
+
+                
+                    
+                        
+                    
+                
+            
+
+            
+                
+
+                
+                    
+                        
+                    
+                
+            
+            
+                
+
+                
+                    
+                        
+                    
+                
+            
+            
+                
+                    
+                    
+                        
+                            
+                        
+                    
+                
+                
+                    
+                        
+                    
+                
+            
+            
+                
+
+                
+                    
+                        
+                    
+                
+            
+
+        <?php echo Form::open([ 'url' => route('store-profile'), 'class' => 'row bg-f6 p-5 p-5', 'files' => 'true' ]); ?>
+
+
+            <div class="col-md-4 col-12 text-md-right text-center">
+
+                <div class="form-group col-12 mb wow zoomIn">
+                    <img class="img-fluid w-100" src="<?php echo e(url("/public/uploads/users/$user->photo")); ?>" alt="<?php echo e($user->name); ?>">
+                </div>
+                <div class="col-12 mb-4 wow zoomIn <?php echo e($errors->has('image') ? ' has-error' : ''); ?>">
+                    <label class="custom-file border-0">
+                        <input name="image" type="file" id="file" class="custom-file-input">
+                        <span class="custom-file-control text-center bg-c5 text-white">تغيير الصورة</span>
+                    </label>
+                    <?php if($errors->has('image')): ?>
+                        <span class="help-block">
+                            <strong><?php echo e($errors->first('image')); ?></strong>
+                        </span>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-12">
+                <div class="form-group col-12 mb-4 wow zoomIn <?php echo e($errors->has('name') ? ' has-error' : ''); ?>">
+                    <input name="name" value="<?php echo e($user->name); ?>" type="text" class="form-control rounded-0" placeholder="الاسم كاملَا" required>
+
+                    <?php if($errors->has('name')): ?>
+                        <span class="help-block">
+                            <strong><?php echo e($errors->first('name')); ?></strong>
+                        </span>
+                    <?php endif; ?>
+                </div>
+
+                <div class="form-group col-12 mb-4 wow zoomIn <?php echo e($errors->has('phone') ? ' has-error' : ''); ?>">
+                    <input name="phone" value="<?php echo e($user->phone); ?>" type="text" class="form-control rounded-0" placeholder="رقم الجوال" required>
+
+                    <?php if($errors->has('phone')): ?>
+                        <span class="help-block">
+                            <strong><?php echo e($errors->first('phone')); ?></strong>
+                        </span>
+                    <?php endif; ?>
+                </div>
+
+                <div class="form-group col-12 mb-4 wow zoomIn <?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
+                    <input name="email" value="<?php echo e($user->email); ?>" type="email" class="form-control rounded-0" placeholder="البريد الإلكترونى" required>
+
+                    <?php if($errors->has('email')): ?>
+                        <span class="help-block">
+                            <strong><?php echo e($errors->first('email')); ?></strong>
+                        </span>
+                    <?php endif; ?>
+                </div>
+
+                <div class="form-group col-12 mb-4 wow zoomIn <?php echo e($errors->has('city_id') ? ' has-error' : ''); ?>" data-wow-delay=".8s">
+                    <select name="city_id" class="form-control rounded-0 py-0 select" id="city_id" required>
+                        <option value="<?php echo e($user->city_id); ?>" selected><?php echo e($user->city->city); ?></option>
+                        <?php $__currentLoopData = $cities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $city): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php if($city->id != $user->city_id): ?>
+                                <option value="<?php echo e($city->id); ?>"><?php echo e($city->city); ?></option>
+                            <?php endif; ?>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </select>
+                    <?php if($errors->has('city_id')): ?>
+                        <span class="help-block">
+                            <strong><?php echo e($errors->first('city_id')); ?></strong>
+                        </span>
+                    <?php endif; ?>
+                </div>
+                <div class="form-group col-12 mb-4 wow zoomIn <?php echo e($errors->has('location_text') ? ' has-error' : ''); ?>">
+                    <input name="location_text" value="<?php echo e($user->location_text); ?>" type="text" class="form-control rounded-0" placeholder="العنوان" required>
+
+                    <?php if($errors->has('location_text')): ?>
+                        <span class="help-block">
+                            <strong><?php echo e($errors->first('location_text')); ?></strong>
+                        </span>
+                    <?php endif; ?>
+                </div>
+            </div>
+
+            <div class="row w-100">
+                <div class="col-12">
+                    <div class="text-center mt-5 wow fadeInDown">
+                        <h2 class="color-c5">موقعك على الخريطة</h2>
+                        <img class="img-fluid" src="<?php echo e(URL::asset('public/web/img/line.png')); ?>" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            
+                
+                    
+
+                        <div class="form-group col-sm-6 col-xs-12 mb-4 wow zoomIn <?php echo e($errors->has('lat') ? ' has-error' : ''); ?>" data-wow-delay=".9s">
+                            
+                            <input id="map_lat" name="lat" value="<?php echo e($user->lat); ?>" type="hidden">
+
+                            <?php if($errors->has('lat')): ?>
+                                <span class="help-block">
+                                    <strong><?php echo e($errors->first('lat')); ?></strong>
+                                </span>
+                            <?php endif; ?>
+                        </div>
+                        <div class="form-group col-sm-6 col-xs-12 mb-4 wow zoomIn <?php echo e($errors->has('long') ? ' has-error' : ''); ?>" data-wow-delay=".9s">
+                            
+                            <input id="map_long" name="long" value="<?php echo e($user->long); ?>" type="hidden">
+
+                            <?php if($errors->has('long')): ?>
+                                <span class="help-block">
+                                    <strong><?php echo e($errors->first('long')); ?></strong>
+                                </span>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="form-group col-sm-12 col-xs-12 mb-4 wow zoomIn" data-wow-delay=".1s">
+                            <div id="div_map" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                        <div class="col mt-4 wow zoomIn" data-wow-delay="1s">
+                            <button type="submit" class="btn bg-c5 font-18 py-2 px-5 text-white btn-hover">حفظ</button>
+                        </div>
+                    
+                
+            
+
+            <?php echo Form::close(); ?>
+
+        </div>
+    </div>
+
+    <section class="img position-relative bg-cover">
+        <div class="overlay position-absolute">
+        </div>
+    </section>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('scripts'); ?>
+    
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5F_F681KtY6i1FIrNt0eLXm_hioNSg1w&v=3.exp&language=ar&amp;libraries=places"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            var CSRF_TOKEN = $('meta[name="X-CSRF-TOKEN"]').attr('content');
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            //------map----------
+            var latlng;
+            var marker;
+            var map;
+
+            var lat_val = parseFloat($('#map_lat').val());
+            var long_val = parseFloat($('#map_long').val());
+
+            var pos = {lat: lat_val, lng: long_val};
+            var geocoder = new google.maps.Geocoder;
+
+
+            map = new google.maps.Map(document.getElementById('div_map'), {
+                zoom: 14,
+                center: pos
+            });
+            marker = new google.maps.Marker({
+                draggable: true,
+                position: pos,
+                map: map
+            });
+
+            google.maps.event.addListener(marker, 'dragend', function (event) {
+
+                $("#map_lat").val(this.getPosition().lat());
+                $("#map_long").val(this.getPosition().lng());
+
+                latlng = {lat: this.getPosition().lat(), lng: this.getPosition().lng()};
+
+                geocoder.geocode({'location': latlng}, function (results, status) {
+                    if (status === 'OK') {
+                        console.log(results)
+//                        if (results[1]) {
+//                            $("#map_address").val(results[1].formatted_address);
+//                        }
+                    }
+                    map.setZoom(14);
+                });
+            });
+
+            if (navigator.geolocation) {
+
+                navigator.geolocation.getCurrentPosition(function (positions) {
+                    lat = positions.coords.latitude;
+                    lng = positions.coords.longitude;
+
+                    $("#map_lat").val(lat);
+                    $("#map_long").val(lng);
+
+                    if(marker){
+                        marker.setMap(null);
+                    }
+                    var latlng = {lat: lat, lng: lng};
+
+                    geocoder.geocode({'location': latlng}, function (results, status) {
+                        if (status === 'OK') {
+                            if (results[1]) {
+//                                $("#map_address").val(results[1].formatted_address);
+                                map.setCenter(new google.maps.LatLng(lat, lng));
+                                marker = new google.maps.Marker({
+                                    draggable: true,
+                                    position: latlng,
+                                    map: map
+                                });
+                                map.setZoom(14);
+                                google.maps.event.addListener(marker, 'dragend', function (event) {
+                                    $("#map_lat").val(this.getPosition().lat());
+                                    $("#map_long").val(this.getPosition().lng());
+                                    latlng = {lat: this.getPosition().lat(), lng: this.getPosition().lng()};
+                                    geocoder.geocode({'location': latlng}, function (results, status) {
+//                                        if (status === 'OK') {
+//                                            if (results[1]) {
+//                                                $("#map_address").val(results[1].formatted_address);
+//                                            }
+//                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                });
+            }
+
+
+        });
+    </script>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('web.layout.master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

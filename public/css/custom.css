@@ -1,0 +1,25 @@
+.count-span {
+    color: red;
+    float: left;
+    margin-left: 10px;
+    padding: 0 10px;
+    background: #f0fafb;
+    border-radius: 5px;
+}
+
+.not-found {
+    padding: 20px;
+    overflow: hidden;
+    background: #5a379a;
+    margin: 20px;
+}
+
+.not-found p {
+    color: #fff;
+    text-align: center;
+}
+
+.about-img{
+    display: block;
+    margin: auto auto;
+}
